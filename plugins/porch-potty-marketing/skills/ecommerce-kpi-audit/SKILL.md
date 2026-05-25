@@ -25,10 +25,23 @@ Use whatever data exists for the requested period:
 - Performance/UX: Core Web Vitals, site speed, landing-page notes, screenshots, heatmaps, or test reports if provided.
 - Optional brand context: value propositions, product positioning, CRO history, A/B test criteria, customer profiles, margin and inventory constraints.
 
+## Source Unblocking Workflow
+
+Before declaring ecommerce data blocked, work through every safe option:
+
+1. Check current files, pasted data, existing reports, and connected read-only sources.
+2. Check whether a relevant built-in Codex plugin is installed and usable. For example, use Google Drive or Spreadsheets for Drive/Sheets exports and reports; use browser/Chrome only when the user explicitly approves visible account access.
+3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why. Do not claim direct Shopify, GA4, Search Console, or Amazon access unless that connector/tool is visible in the current Codex environment.
+4. Offer the export fallback: ask for the smallest Shopify, GA4, Search Console, website, or product report export that unlocks the blocked section.
+5. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
+6. If no route is available, mark the affected section `missing` or `degraded` and continue with supported sections only.
+
+Include the attempted source path and remaining blocker in evidence and caveats.
+
 ## Steps
 
 1. Confirm scope, date range, and source freshness.
-2. Preflight Shopify revenue truth, GA4/traffic, product data, margin, inventory, attribution, and cohort/repeat-purchase inputs.
+2. Preflight Shopify revenue truth, GA4/traffic, product data, margin, inventory, attribution, and cohort/repeat-purchase inputs. For missing inputs, run the Source Unblocking Workflow.
 3. Build a KPI scorecard only from available evidence.
 4. Identify product winners/losers, funnel issues, traffic-source performance, landing-page problems, and conversion opportunities.
 5. Estimate lift or profit impact only where the data supports it; otherwise mark recommendations conditional.
@@ -42,7 +55,7 @@ For replenishment, subscription, repeat-purchase, LTV, payback, or profit-lift c
 - **Observed facts:** signals actually present
 - **Blocked ideas:** ideas that need more data
 - **Missing inputs:** exact order, cohort, subscription, margin, or inventory rows needed
-- **Next step:** smallest read-only source/report that would unblock it
+- **Next step:** smallest built-in plugin/connector, read-only source/report, upload, pasted table, or approved visible-browser/OAuth path that would unblock it
 
 ## Report Sections
 

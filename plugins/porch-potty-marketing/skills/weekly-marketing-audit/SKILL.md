@@ -26,10 +26,23 @@ Use whatever is available:
 
 If current KPI data is missing, return a partial audit or missing-input checklist. If prior audit or action logs are missing, omit follow-up analysis and mark that section `missing`.
 
+## Source Unblocking Workflow
+
+Before declaring a source blocked, work through every safe option:
+
+1. Check current files, pasted data, existing reports, and connected read-only sources.
+2. Check whether a relevant built-in Codex plugin is installed and usable. For example, use Google Drive or Spreadsheets for Drive/Sheets exports and reports; use browser/Chrome only when the user explicitly approves visible account access.
+3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why. Do not pretend a connector exists for Shopify, GA4, Google Ads, Meta, TikTok, Klaviyo, Amazon, or Search Console if it is not visible in the current Codex environment.
+4. Offer the export fallback: ask for the smallest CSV/XLSX/PDF/screenshot/pasted table that unlocks the blocked section.
+5. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human must complete login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
+6. If no route is available, mark the section `missing` or `degraded` and continue with supported sections only.
+
+Report source-unblocking attempts in the audit under `Missing / degraded data`.
+
 ## Steps
 
 1. Identify the reporting week, comparison period, and sources available.
-2. Preflight current KPIs, prior audit, and prior actions. Mark each source `ready`, `partial`, `stale`, `missing`, or `degraded`.
+2. Preflight current KPIs, prior audit, and prior actions. For missing sources, run the Source Unblocking Workflow before marking each source `ready`, `partial`, `stale`, `missing`, or `degraded`.
 3. Summarize what changed since the prior audit when evidence exists.
 4. Read current cross-channel data: ecommerce, paid media, lifecycle/email/SMS, organic/search, website/funnel, and Amazon only if provided.
 5. Assess early results from prior recommendations only when a prior-action log or report supports it.
@@ -56,7 +69,7 @@ When the audit is partial or blocked, return:
 - **Available context:** sources found and date ranges
 - **Missing inputs:** exact report, KPI, export, or connection needed
 - **Decision impact:** recommendations or follow-up blocked by the missing source
-- **Next step:** smallest read-only upload or connection that would unblock it
+- **Next step:** smallest built-in plugin/connector, upload, pasted table, existing report, or approved visible-browser/OAuth path that would unblock it
 
 ## Quality Rules
 

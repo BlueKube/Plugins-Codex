@@ -25,10 +25,23 @@ Ask for the report name when it is missing or ambiguous. Depending on the report
 - Prior-period data for deltas.
 - Optional brand context and prior reports.
 
+## Source Unblocking Workflow
+
+Before declaring a report section blocked, work through every safe option:
+
+1. Check current files, pasted data, existing reports, and connected read-only sources.
+2. Check whether a relevant built-in Codex plugin is installed and usable. For example, use Google Drive or Spreadsheets for Drive/Sheets exports and reports; use browser/Chrome only when the user explicitly approves visible account access.
+3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why. Do not claim unavailable Shopify, GA4, ads, Klaviyo, Amazon, or Search Console access.
+4. Offer the export fallback: ask for the smallest CSV/XLSX/PDF/screenshot/pasted table that unlocks the requested report.
+5. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
+6. If no route is available, mark the section `missing` or `degraded` and continue with supported sections only.
+
+Include a short `Source access attempted` note when the report is partial.
+
 ## Steps
 
 1. Resolve the report name or ask a concise clarification if multiple reports match.
-2. Preflight required sources and mark each `ready`, `partial`, `stale`, `missing`, or `degraded`.
+2. Preflight required sources. For missing sources, run the Source Unblocking Workflow before marking each `ready`, `partial`, `stale`, `missing`, or `degraded`.
 3. Use a bundled definition if one exists later; otherwise use the common structures below.
 4. Build only the rows and sections supported by evidence.
 5. Add caveats for missing context that affects interpretation.
@@ -49,7 +62,7 @@ If the requested report cannot run cleanly, return:
 - **Status:** `partial`, `degraded`, or `blocked_by_missing_inputs`
 - **Runnable sections:** sections that can be produced now
 - **Missing sections:** sections blocked by missing source data
-- **Needed upload/connection:** smallest export, pasted table, report, or read-only source needed
+- **Needed upload/connection:** smallest built-in plugin/connector, export, pasted table, report, or approved visible-browser/OAuth path needed
 - **Decision impact:** what cannot be recommended until the data arrives
 
 ## Quality Rules

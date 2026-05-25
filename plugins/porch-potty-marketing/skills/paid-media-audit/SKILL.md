@@ -26,10 +26,23 @@ Use any paid media export or read-only source for the review period:
 
 If required data is missing, ask for the smallest read-only export that unblocks the question.
 
+## Source Unblocking Workflow
+
+Before declaring paid media data blocked, work through every safe option:
+
+1. Check current files, pasted data, existing reports, and connected read-only sources.
+2. Check whether a relevant built-in Codex plugin is installed and usable. For example, use Google Drive or Spreadsheets for exported reports stored in Drive/Sheets; use browser/Chrome only when the user explicitly approves visible account access.
+3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why. Do not claim direct Meta, TikTok, Google Ads, Amazon Ads, or Pinterest Ads access unless that connector/tool is visible in the current Codex environment.
+4. Offer the export fallback: ask for the smallest platform export that unlocks the audit, such as campaign/ad/ad set performance, search terms, creative performance, or placement/network data.
+5. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
+6. If no route is available, mark the affected analysis `missing` or `degraded` and continue with supported sections only.
+
+Include the attempted source path and remaining blocker in missing-data requests.
+
 ## Steps
 
 1. Confirm platform, date range, comparison period, and source freshness.
-2. Preflight performance, structure, creative, budget, margin, inventory, and attribution/incrementality inputs.
+2. Preflight performance, structure, creative, budget, margin, inventory, and attribution/incrementality inputs. For missing inputs, run the Source Unblocking Workflow.
 3. Summarize KPI performance and source caveats.
 4. Identify waste: low-return spend concentration, fatigued creative, irrelevant search terms, poor placements, weak conversion paths, or delivery constraints.
 5. Identify winners and scale candidates, but gate scale behind profitability, inventory, and attribution/incrementality evidence.
@@ -51,7 +64,7 @@ If a campaign looks scalable but context is missing, return:
 - **Blocked campaigns:** campaigns that otherwise look like scale candidates
 - **Missing inputs:** exact margin, inventory, conversion, attribution, incrementality, or new-customer data needed
 - **Decision impact:** why scale is blocked
-- **Next step:** smallest read-only source or upload that would unblock it
+- **Next step:** smallest built-in plugin/connector, read-only source, upload, pasted table, or approved visible-browser/OAuth path that would unblock it
 
 ## Quality Rules
 

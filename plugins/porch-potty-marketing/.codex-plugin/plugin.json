@@ -1,6 +1,6 @@
 {
   "name": "porch-potty-marketing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Marketing workflows for Porch Potty, a dog-potty e-commerce brand under BlueKube. Produces recommend-only reports and audits from uploaded exports, pasted data, and connected read-only sources.",
   "homepage": "https://github.com/BlueKube/Plugins-Codex",
   "repository": "https://github.com/BlueKube/Plugins-Codex",
