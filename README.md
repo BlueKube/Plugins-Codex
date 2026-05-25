@@ -1,12 +1,29 @@
-# Porch Potty Marketing Codex Marketplace
+# BlueKube Codex Plugins
 
-Local Codex marketplace for the `porch-potty-marketing` plugin.
+Codex plugin marketplace for BlueKube workflows.
+
+Current plugin:
+
+- `porch-potty-marketing`: recommend-only marketing reports and audits for Porch Potty.
 
 ## Install In Codex
 
 Use **Plugins** -> **Add More** -> **Add marketplace**.
 
-For a local install, use this folder as the source:
+For the GitHub install, use this repository as the source:
+
+```text
+https://github.com/BlueKube/Plugins-Codex
+```
+
+Set:
+
+```text
+Git ref: main
+Sparse paths: leave blank
+```
+
+For local testing, use this folder as the source:
 
 ```text
 C:\Users\bkenn\codex-marketplaces\porch-potty-marketing
