@@ -1,20 +1,20 @@
-﻿{
-    "name":  "porch-potty-marketing-local",
-    "interface":  {
-                      "displayName":  "Porch Potty Marketing Local"
-                  },
-    "plugins":  [
-                    {
-                        "policy":  {
-                                       "installation":  "AVAILABLE",
-                                       "authentication":  "ON_INSTALL"
-                                   },
-                        "category":  "Marketing",
-                        "name":  "porch-potty-marketing",
-                        "source":  {
-                                       "path":  "./plugins/porch-potty-marketing",
-                                       "source":  "local"
-                                   }
-                    }
-                ]
+{
+  "name": "bluekube",
+  "interface": {
+    "displayName": "BlueKube"
+  },
+  "plugins": [
+    {
+      "name": "porch-potty-marketing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/porch-potty-marketing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Marketing"
+    }
+  ]
 }
