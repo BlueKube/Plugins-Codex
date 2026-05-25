@@ -1,0 +1,4 @@
+interface:
+  display_name: "Standard Report"
+  short_description: "Generate a cited standard report."
+  default_prompt: "Generate the requested standard Porch Potty marketing report from available data."

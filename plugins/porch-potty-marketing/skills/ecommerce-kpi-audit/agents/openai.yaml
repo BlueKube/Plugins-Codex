@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ecommerce KPI Audit"
+  short_description: "Audit Shopify and website KPIs."
+  default_prompt: "Audit Porch Potty ecommerce KPIs from the available Shopify, GA4, and website data."

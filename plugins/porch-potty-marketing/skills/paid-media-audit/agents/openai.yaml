@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paid Media Audit"
+  short_description: "Audit paid media exports."
+  default_prompt: "Audit Porch Potty paid media performance from the provided exports and cite the evidence."

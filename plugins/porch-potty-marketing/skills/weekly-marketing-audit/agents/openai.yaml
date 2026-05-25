@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weekly Marketing Audit"
+  short_description: "Cited weekly cross-channel audit."
+  default_prompt: "Run a weekly Porch Potty marketing audit from the available exports and connected read-only sources."

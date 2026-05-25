@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check What I Can Run"
+  short_description: "Check runnable reports now."
+  default_prompt: "Check which Porch Potty marketing reports are runnable with the current files and connections."
