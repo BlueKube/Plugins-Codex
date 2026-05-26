@@ -1,6 +1,6 @@
 {
   "name": "porch-potty-marketing",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Marketing workflows for Porch Potty, a dog-potty e-commerce brand under BlueKube. Produces recommend-only reports and audits from uploaded exports, pasted data, and connected read-only sources.",
   "homepage": "https://github.com/BlueKube/Plugins-Codex",
   "repository": "https://github.com/BlueKube/Plugins-Codex",
@@ -11,7 +11,7 @@
   "interface": {
     "displayName": "Porch Potty Marketing",
     "shortDescription": "Recommend-only Porch Potty marketing audits and reports.",
-    "longDescription": "Marketing workflows for Porch Potty. Run cited weekly audits, standard reports, paid media audits, ecommerce KPI reads, and readiness checks from uploaded exports, pasted data, and connected read-only sources. Missing sources are marked missing or degraded rather than invented.",
+    "longDescription": "Marketing workflows for Porch Potty. Run cited weekly audits, standard reports, paid media audits, ecommerce KPI reads, and first-run readiness checks from uploaded exports, pasted data, connected read-only sources, shared Drive evidence, and approved connector/MCP routes. Missing sources are marked missing or degraded rather than invented.",
     "developerName": "BlueKube",
     "category": "Marketing",
     "capabilities": [
@@ -21,6 +21,6 @@
       "ecommerce-kpi-audit",
       "check-what-i-can-run"
     ],
-    "defaultPrompt": "Check what Porch Potty marketing reports can run from the current files and connected read-only sources."
+    "defaultPrompt": "Check what Porch Potty marketing reports can run from the current files, shared Drive evidence, and connected read-only sources; tell me which built-in plugins, approved MCP routes, or exports would improve the result."
   }
 }

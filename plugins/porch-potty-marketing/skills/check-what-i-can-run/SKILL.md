@@ -15,6 +15,10 @@ Use this readiness preflight before producing or trusting Porch Potty marketing 
 - Do not browse account UIs or use a browser unless the user explicitly asks for visible browser verification. Stop at credentials, OTPs, billing, settings changes, PII, or any live-change boundary.
 - Every readiness claim must cite the file, pasted input, connected source, or visible context used.
 
+## Source Connection Reference
+
+Always read `../../references/source-connections.md` before producing this readiness check. Use it as the first-run onboarding map for built-in Codex plugins, shared Drive evidence, official/vendor MCP options, exports, and browser/OAuth fallbacks.
+
 ## Sources To Inspect
 
 Assess what the current session can reach, in this order:
@@ -38,23 +42,19 @@ For every missing or degraded source, work through all safe routes before markin
 5. Offer visible-browser/OAuth fallback only with explicit human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
 6. If every route is unavailable, mark the source `missing` or `degraded` and list the blocked reports.
 
-Use this source map:
-
-- **Shopify:** prefer connected source if present; otherwise Shopify sales/product/customer export, existing report, or approved visible-browser export. Missing Shopify blocks revenue truth.
-- **GA4 / Search Console:** prefer connected source if present; otherwise Google Drive/Sheets-stored exports, GA4/Search Console CSV export, pasted report, or approved OAuth/browser export.
-- **Paid media:** prefer connected ads source if present; otherwise platform exports or approved visible-browser export for Meta, Google Ads, TikTok, Pinterest, YouTube, and Amazon Ads.
-- **Klaviyo / lifecycle:** prefer connected source if present; otherwise campaign/flow export, Drive/Sheets report, or pasted table.
-- **Margin / inventory / cohort:** prefer finance/ops report, Shopify export, Drive/Sheets source, or pasted table. Do not recommend scale, discounts, LTV, payback, or contribution without these inputs.
+Use the platform source map in `../../references/source-connections.md` for Shopify, GA4, Search Console, paid media, Klaviyo, Triple Whale, Amazon, unit economics, inventory, and prior-action sources.
 
 ## Steps
 
 1. Identify requested report(s) or assess all plugin reports if none are named.
-2. Inventory sources by type: Shopify/ecommerce, GA4/website, paid media, lifecycle/email/SMS, Amazon, margin, inventory, cohort/LTV, prior reports, action logs.
-3. For each source, record access method, date range, freshness, fields available, and caveats.
-4. For each missing or degraded source, run the Source Unblocking Workflow.
-5. Decide which reports are runnable now, runnable degraded, or blocked.
-6. Apply the gating rules below.
-7. Return a concise readiness matrix and next fetch recommendation.
+2. Inventory sources by type: Shopify/ecommerce, GA4/website, Search Console/SEO, paid media, lifecycle/email/SMS, Amazon, Triple Whale/attribution, margin, inventory, cohort/LTV, prior reports, and action logs.
+3. Test built-in Codex routes that are visible in the current session, especially Google Drive/Sheets/Spreadsheets and Supabase when relevant.
+4. Search shared Google Drive evidence when available before asking for uploads.
+5. For each source, record access method, date range, freshness, fields available, and caveats.
+6. For each missing or degraded source, run the Source Unblocking Workflow and name the best next route: built-in plugin, official/vendor MCP, export, or approved browser/OAuth.
+7. Decide which reports are runnable now, runnable degraded, or blocked.
+8. Apply the gating rules below.
+9. Return a concise readiness matrix, report-by-report status, and top 3 source unblocks.
 
 ## Per-Source Readout
 
@@ -64,7 +64,7 @@ For every source in scope, report:
 - **Status:** `ready`, `ready_with_caveats`, `partial`, `stale`, `missing_data`, `missing_credentials`, `needs_browser_verification`, or `not_configured`.
 - **Access method:** connector, upload, pasted data, named report, or browser.
 - **Date range** and freshness.
-- **Missing fields** and the smallest next step, including the plugin/connector to install, export to upload, or approved visible-browser/OAuth path.
+- **Missing fields** and the smallest next step, including the built-in plugin/connector to install, official/vendor MCP setup to request, export to upload, or approved visible-browser/OAuth path.
 - **Evidence citation** for the readiness claim.
 
 ## Top-Level Decision

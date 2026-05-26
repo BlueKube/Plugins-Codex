@@ -15,6 +15,10 @@ Use this skill when the user asks for a named Porch Potty standard report, score
 - Cite every factual or numeric claim to evidence.
 - Surface source disagreements instead of smoothing them over.
 
+## Source Connection Reference
+
+When source access, first-run setup, missing connections, MCP routes, or team onboarding matters, read `../../references/source-connections.md` and follow its source map. Prefer built-in Codex routes visible in the current session before recommending exports, official/vendor MCPs, or approved browser/OAuth paths.
+
 ## Inputs
 
 Ask for the report name when it is missing or ambiguous. Depending on the report, use:
@@ -30,11 +34,12 @@ Ask for the report name when it is missing or ambiguous. Depending on the report
 Before declaring a report section blocked, work through every safe option:
 
 1. Check current files, pasted data, existing reports, and connected read-only sources.
-2. Check whether a relevant built-in Codex plugin is installed and usable. For example, use Google Drive or Spreadsheets for Drive/Sheets exports and reports; use browser/Chrome only when the user explicitly approves visible account access.
-3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why. Do not claim unavailable Shopify, GA4, ads, Klaviyo, Amazon, or Search Console access.
-4. Offer the export fallback: ask for the smallest CSV/XLSX/PDF/screenshot/pasted table that unlocks the requested report.
-5. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
-6. If no route is available, mark the section `missing` or `degraded` and continue with supported sections only.
+2. Check whether a relevant built-in Codex plugin is installed and usable. Use Google Drive/Sheets/Spreadsheets for shared exports and reports; use Supabase only for intended KPI memory; use browser/Chrome only when the user explicitly approves visible account access.
+3. If a useful built-in plugin is not installed or connected, tell the user exactly which Codex plugin or connector to install/connect and why.
+4. If no native Codex route exists, recommend a BlueKube-approved official/vendor MCP route where one is known, or state that no approved connector is visible.
+5. Offer the export fallback: ask for the smallest CSV/XLSX/PDF/screenshot/pasted table that unlocks the requested report.
+6. Offer visible-browser/OAuth fallback only after explaining the read-only goal and getting human approval. The human completes login, MFA, OAuth consent, account selection, and export/download clicks. Stop at credentials, billing, permissions, payment, settings changes, PII, or live-change boundaries.
+7. If no route is available, mark the section `missing` or `degraded` and continue with supported sections only.
 
 Include a short `Source access attempted` note when the report is partial.
 
